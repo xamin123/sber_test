@@ -45,6 +45,7 @@ $config = [
                 ],
             ],
         ],
+        'defaultRoute' => 'weather-report/index',
         'db' => $db,
 
         'urlManager' => [
