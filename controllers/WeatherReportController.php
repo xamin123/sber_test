@@ -12,7 +12,6 @@ use yii\web\Controller;
 
 class WeatherReportController extends Controller
 {
-    private const DATE_FORMAT = 'Y-m-d';
     /**
      * @var WeatherReportService
      */
@@ -31,9 +30,10 @@ class WeatherReportController extends Controller
     }
 
     /**
+     * @return string
      * @throws \yii\db\Exception
      */
-    public function actionIndex(?string $dateFrom = null, ?string $dateTo = null)
+    public function actionIndex(): string
     {
         $weatherForm = new WeatherReportForm();
         $weatherForm->load(Yii::$app->request->get());
